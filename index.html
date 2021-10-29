@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="grid">
+      <div class="grid wide">
         <!-- Header navbar -->
-        <nav class="navbar-top">
+        <nav class="navbar-top hide-on-mobile-tablet">
           <ul class="navbar-top__list">
             <li class="navbar-top__item separate qr-hide">
               Vào cửa hàng trên ứng dụng của shop
@@ -121,7 +123,26 @@
         </nav>
         <!-- Header with search -->
         <div class="header-with-search">
-          <div class="header__logo">
+          <div class="mobile-menu-search">
+            <label for="mobile-menu-box" class="header__mobile-menu">
+              <i class="fas fa-bars header__mobile-menu-icon"></i>
+            </label>
+            <label for="mobile-search-box" class="header__mobile-search">
+              <i class="fas fa-search header__mobile-search-icon"></i>
+            </label>
+          </div>
+          <input type="checkbox" hidden id="mobile-menu-box">
+          <nav class="mobile-menu-auth">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link">Đăng nhập</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link">Đăng xuất</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__logo hide-on-tablet">
             <a href="/" class="header__logo-link">
               <svg viewBox="0 0 192 65" class="header__logo-img">
                 <g fill-rule="evenodd">
@@ -133,6 +154,8 @@
             </a>
           </div>
           <!-- header search -->
+
+          <input type="checkbox" hidden id="mobile-search-box">
           <div class="header__search">
             <div class="header__search-input-wrap">
               <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
@@ -246,14 +269,30 @@
           </div>
         </div>
 
+        
       </div>
+      <!-- Header sort bar -->
+      <ul class="header__sort-bar">
+        <li class="header__sort-item">
+          <a href="" class="header__sort-link">Liên quan</a>
+        </li>
+        <li class="header__sort-item header__sort-item--active">
+          <a href="" class="header__sort-link">Mới nhất</a>
+        </li>
+        <li class="header__sort-item">
+          <a href="" class="header__sort-link">Bán chạy</a>
+        </li>
+        <li class="header__sort-item">
+          <a href="" class="header__sort-link">Giá</a>
+        </li>
+      </ul>
     </header>
 
     <div class="container">
-      <div class="grid">
-        <div class="grid__row grid-content">
+      <div class="grid wide">
+        <div class="row sm-gutter grid-content">
 
-          <div class="grid__column-2">
+          <div class="col l-2 m-0 c-0">
             <nav class="category">
               <h3 class="category__heading">Danh mục</h3>
               <ul class="category-list">
@@ -270,8 +309,8 @@
             </nav>
           </div>
 
-          <div class="grid__column-10">
-            <div class="home-filter">
+          <div class="col l-10 m-12 c-12">
+            <div class="home-filter hide-on-mobile-tablet">
               <span class="home-filter_title">Sắp xếp theo</span>
               <button class="btn home-filter_btn --ml">Phổ biến</button>
               <button class="btn home-filter_btn --ml btn--primary">Mới nhất</button>
@@ -306,11 +345,53 @@
                 </div>
               </div>
             </div>
-
+            <nav class="mobile-category">
+              <ul class="mobile-category__list">
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+                <li class="mobile-category__item">
+                  <a href="" class="mobile-category__link">Điện thoại & Phụ kiện</a>
+                </li>
+              </ul>
+            </nav>
             <div class="home-product">
-              <div class="grid__row">
+              <div class="row sm-gutter">
                 <!-- Product item -->
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -347,7 +428,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -384,7 +465,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -421,7 +502,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -458,7 +539,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -495,7 +576,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -532,7 +613,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -569,7 +650,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -606,7 +687,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -643,7 +724,7 @@
                     </div>
                   </a>
                 </div>
-                <div class="grid__column-10-2">
+                <div class="col l-2-4 m-4 c-6">
                   <a href="#" class="home-product-item">
                     <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/99d5962630561f6177c7030d24d7fb8d);"></div>
                     <h5 class="home-product-item__name">Điện thoại Xiaomi 11 Lite 5G NE (6+128gb / 8+128gb) | Chip Snapdragon ™ 778G | Hàng chính hãng</h5>
@@ -723,9 +804,9 @@
     </div>
 
     <footer class="footer">
-      <div class="grid">
-        <div class="grid__row">
-          <div class="grid__column-10-2">
+      <div class="grid wide footer-mobile">
+        <div class="row">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
             <ul class="footer-list">
               <li class="footer-item">
@@ -739,7 +820,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-10-2">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">Về shop</h3>
             <ul class="footer-list">
               <li class="footer-item">
@@ -753,7 +834,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-10-2">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">Danh mục</h3>
             <ul class="footer-list">
               <li class="footer-item">
@@ -764,7 +845,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-10-2">
+          <div class="col l-2-4 m-4 c-6">
             <h3 class="footer__heading">Theo dõi</h3>
             <ul class="footer-list">
               <li class="footer-item">
@@ -787,7 +868,7 @@
               </li>
             </ul>
           </div>
-          <div class="grid__column-10-2">
+          <div class="col l-2-4 m-8 c-12">
             <h3 class="footer__heading">Tải app shop</h3>
             <a href="" class="footer__link">
               <div class="footer__download">
@@ -802,7 +883,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="grid">
+        <div class="grid wide">
           <p class="footer__copy-right">&copy 2021 - Bản quyền thuộc về Công ty CV</p>
         </div>
       </div>
